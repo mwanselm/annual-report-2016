@@ -1,0 +1,92 @@
+---
+---
+$output-bourbon-deprecation-warnings: false;
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "normalize.css";
+@import "font-stylesheet.css";
+//@import "jquery.modal.css";
+//@import "footer.css";
+@import "variables";
+
+@mixin vertical-align () {
+top: 50%; position:relative; z-index:110; 
+-webkit-transform: translateY(-50%); 
+-moz-transform:translateY(-50%); 
+-ms-transform:translateY(-50%); 
+-o-transform:translateY(-50%);  
+transform:translateY(-50%);
+}
+
+.transition {transition:all ease .3s; -moz-transition:all ease .3s; -webkit-transition:all ease .3s; }
+.transition2 {
+  transition:width linear .5s; -moz-transition:width linear .5s; -webkit-transition:width linear .5s;
+  transition:height linear .5s; -moz-transition:height linear .5s; -webkit-transition:height linear .5s;
+}
+
+img {max-width:100%;}
+
+.story .hero {
+  .slide-hero-content {
+    div.sig-line {font-size: 90px; display: inline-block; text-align: left; font-family:$black; line-height: 80px; text-transform: uppercase; color: #328abd;  max-width:660px; margin:0 auto;
+      text-transform: uppercase; margin:0;vertical-align:top; width:100%; box-sizing:border-box;      
+        span {display:inline-block; line-height:80px; float:left; vertical-align:middle; clear:left;}
+        span.gray {color:#d8dbe4;} 
+        .animation {display:inline-block; position:relative; float:left;top:-20px; }
+  	  #animation_container, #animation_container div, #animation_container canvas {
+  		  width:580px !Important; height:118.08px !Important;
+  	  }
+    }
+  }
+
+
+
+  @media screen and (max-width: 1100px) { 
+   .slide-hero-content {
+      div.sig-line {padding:0 0px;}
+   }
+  }
+  @media screen and (max-width: 767px) { 
+    .slide-hero-content {
+      div.sig-line {font-size: 54px;  line-height: 47px; max-width:100%;  
+        span { line-height:47px; }
+        .animation {top:-10px;}
+    	  #animation_container, #animation_container div, #animation_container canvas {
+    		  width:334px !Important; height:68px !Important;
+    	  }
+      }
+    }
+  }
+  @media screen and (max-height: 650px) {
+    .slide-hero-content {
+      div.sig-line{
+        font-size: 70px;
+        line-height: 60px;
+        span {
+          line-height: 60px;
+        }
+      }
+    }
+  }
+    
+	@media screen and (max-width: 479px) { 
+    .slide-hero-content {
+      div.sig-line {font-size: 41px;  line-height: 43px; padding:0; 
+		  span { line-height:40px; &.gray {margin-top: -18px;} }
+        .animation {top:-10px;}
+    	  #animation_container, #animation_container div, #animation_container canvas {
+    		  width:275px !Important; height:63.17px !Important;
+    	  }
+      }
+    }
+  }
+}
+
+
+#tts {display:none;}
+@media screen and (max-width: 768px) {
+
+  #tts {display:block; position:relative; margin:45px auto 45px auto; width:115px ; height:115px;}
+  .nav-message #start, .hidden_arrow #story-next {display:none !important;}
+  .slide1 .fp-tableCell {vertical-align:bottom;}
+}

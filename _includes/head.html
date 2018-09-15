@@ -1,0 +1,48 @@
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+	<!-- Plain Description -->
+	<title>{% if page.fulltitle %}{{page.fulltitle}}{% endif %}</title>
+	<meta name="description" content="{% if page.excerpt %}{{page.excerpt}}{% else %}{{site.tagline}}{% endif %}">
+  <meta name="keywords" content="{% if page.keywords %}{{page.keywords}}{% endif %}">
+	<link rel="icon" type="image/png" href="/favicon.png">
+	
+	<!-- Google+ -->
+	<meta itemprop="name" content="{% if page.fulltitle %}{{page.fulltitle}}{% else %}{{page.title}} | {{ site.title }} {% endif %}">
+	<meta itemprop="description" content="{% if page.excerpt %}{{page.excerpt}}{% else %}{{site.tagline}}{% endif %}">
+	<meta itemprop="image" content="{% if page.image %}{{page.image}}{% else %}{{site.url}}{{site.socialimg}}{% endif %}">
+	
+	<!-- Facebook -->
+	<meta property="og:type" content="website"/>
+	<meta property="og:title" content="{% if page.fulltitle %}{{page.fulltitle}}{% else %}{{page.title}} | {{ site.title }} {% endif %}"/>
+	<meta property="og:description" content="{% if page.excerpt %}{{page.excerpt}}{% else %}{{site.tagline}}{% endif %}"/>
+	<meta property="og:image" content="{% if page.image %}{{page.image}}{% else %}{{site.url}}{{site.socialimg}}{% endif %}"/>
+	<meta property="og:url" content="http://www.guardianlife.com/annual-report-2016{{page.url}}"/>
+	<meta property="og:site_name" content="{{ site.title }} "/>
+	
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="{% if page.fulltitle %}{{page.fulltitle}}{% else %}{{page.title}} | {{ site.title }} {% endif %}">
+	<meta name="twitter:description" content="{% if page.excerpt %}{{page.excerpt}}{% else %}{{site.tagline}}{% endif %}">
+	<meta name="twitter:image" content="{% if page.image %}{{page.image}}{% else %}{{site.url}}{{site.socialimg}}{% endif %}">
+	<meta name="twitter:url" content="http://www.guardianlife.com/annual-report-2016{{page.url}}">
+
+	<!-- Webtrends -->
+  <META name='WT.cg_ss' content='Annual Report'>
+  <META name='WT.cg_n' content='Annual Report 2016'>
+  <META name='WT.cg_s' content='{{page.webtrends_cg_s}}'>
+    
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="{{page.file_base}}css/stylesheet-ar16.css">
+  <link rel="stylesheet" href="{{page.file_base}}css/font-awesome/css/font-awesome.min.css">
+	<!-- Put your fonts here -->
+	{% if page.custom_css %}
+	  {% for stylesheet in page.custom_css %}
+	<link rel="stylesheet" href="{{page.file_base}}css/{{ stylesheet }}.css" media="screen" type="text/css">
+	  {% endfor %}
+	{% endif %}
+  
+  
+</head>
